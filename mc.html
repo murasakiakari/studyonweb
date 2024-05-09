@@ -12,8 +12,8 @@
 </head>
 
 <body>
-    <div class="d-flex justify-content-center align-items-center vh-100" id="formDiv" style="display: none;">
-        <form onsubmit="event.preventDefault(); submit();" class="col-12 col-md-6">
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <form onsubmit="event.preventDefault(); submit_()" class="col-12 col-md-6" id="questionForm" style="display: none;">
             <h3 id="question"></h3>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="answer" value="0" id="option1">
@@ -43,9 +43,6 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script>
-    let questions = [];
-    let currentQuestion = -1;
-
     class Question {
         constructor(question, options, answer) {
             this.question = question;
@@ -64,6 +61,12 @@
             }
         }
     }
+
+    let questions = [];
+    let questionsToBeAnswered = questions;
+    
+    let i = -1;
+    let wrongAnsweredQuestionPositions = [];
 
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
@@ -94,6 +97,12 @@
     }
 
     function init() {
+        if (questions.length > 0) {
+            $("#questionForm").show();
+            newRound();
+            return;
+        }
+
         let params = new URLSearchParams(window.location.search);
         let source = params.get('source');
         if (source) {
@@ -107,7 +116,7 @@
                         return;
                     }
 
-                    $("#formDiv").show();
+                    $("#questionForm").show();
                     newRound();
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
@@ -120,23 +129,36 @@
     }
 
     function newRound() {
-        shuffle(questions);
-        questions.forEach(question => {
+        shuffle(questionsToBeAnswered);
+        questionsToBeAnswered.forEach(question => {
             question.shuffleOptions();
         });
 
-        currentQuestion = -1;
+        i = -1;
+        wrongAnsweredQuestionPositions = [];
         nextQuestion();
     }
 
+    function getWrongAnsweredQuestions() {
+        return wrongAnsweredQuestionPositions.map(position => questionsToBeAnswered[position]);
+    }
+
     function nextQuestion() {
-        currentQuestion++;
-        if (currentQuestion >= questions.length) {
-            alert("All questions answered, restarting");
+        i++;
+        if (i >= questionsToBeAnswered.length) {
+            alert("All questions answered. Correct rate: " + (questionsToBeAnswered.length - wrongAnsweredQuestionPositions.length) + " / " + questionsToBeAnswered.length + " = " + ((questionsToBeAnswered.length - wrongAnsweredQuestionPositions.length) / questionsToBeAnswered.length * 100).toFixed(2) + "%");
+            if (wrongAnsweredQuestionPositions.length != 0 && confirm("Do you want to retry the wrong questions?")) {
+                questionsToBeAnswered = getWrongAnsweredQuestions();
+                newRound();
+                return;
+            }
+
+            alert("Starting a new round");
+            questionsToBeAnswered = questions;
             newRound();
         }
 
-        displayQuestion(questions[currentQuestion]);
+        displayQuestion(questions[i]);
     }
 
     function displayQuestion(question) {
@@ -154,12 +176,14 @@
         }
     }
 
-    function submit() {
+    function submit_() {
+        let currentQuestion = questions[i];
         let answer = $("input[name='answer']:checked").val();
         if (answer == currentQuestion.answer) {
             alert("Correct");
         } else {
-            alert("Incorrect, the current answer is \n" + currentQuestion.options[currentQuestion.answer]);
+            alert("Incorrect, the correct answer is \n" + currentQuestion.options[currentQuestion.answer]);
+            wrongAnsweredQuestionPositions.push(i);
         }
 
         $("input[name='answer']").prop('checked', false);
