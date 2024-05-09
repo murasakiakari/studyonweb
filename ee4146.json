@@ -1,0 +1,672 @@
+[
+    {
+        "question": "Why the Rosenblatt Perceptron model could not handle the 2-dimensional ex-or problem?",
+        "options": [
+            "It was a linear model and with no hidden neurons",
+            "The number of neurons used was not enough",
+            "The early model was hardware implemented, and they could not hardware implement a hidden layer which was far too complicated at the then technology",
+            "All the list answers"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "In the late eighties after Backpropagation algorithm was developed, why didn't we increase the number of hidden layers of a feedforward neural network to ie., 50 layers to solve all difficult problems?",
+        "options": [
+            "Researchers did not believe that is the right direction to work",
+            "The late eighties computer processing power was unable to handle such a complicated computational task",
+            "Increasing the hidden layer alone could not solve all problems",
+            "All the list answers"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "What made the 2009 Netflix Prize so challenging?",
+        "options": [
+            "It was the first generation of Recommender system",
+            "It had a price money of US 1 million",
+            "The first of its kind to accurately predict users favorite movies",
+            "It is a matrix completion problem on a very sparse dataset"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "What made the cDNA cancer classification problem challenging?",
+        "options": [
+            "It is a problem on datasets with little data but huge dimension",
+            "Cancer cells behavior are often unpredictable making classification highly challenging",
+            "The computer processor power at the time of cDNA research was not strong enough",
+            "Cancer cells behavior vary with people so computer science based classification cannot be overall accurate"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Why do we sometimes use unsupervised learning method?",
+        "options": [
+            "Unsupervised learning is less computationally demanding for certain problems",
+            "Not all datasets have full labels and labelling datasets are costly",
+            "Unsupervised learning method can improve classification performance for some problems",
+            "All the list answers"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which of the below is NOT an AI Safety issue?",
+        "options": [
+            "Computer hacking",
+            "Voice cloning",
+            "Deepfake",
+            "All the list answers ARE AI safety issue"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Today, 68 facial landmark points are used to perform frontal facial image recognition. Is the above statement correct?",
+        "options": [
+            "Yes, 68 facial landmark points are used to produce accurate frontal image recognition",
+            "Current technology on frontal facial image recognition has extended to use 458 facial landmark points",
+            "Using facial landmark points as input feature is an old and obsoleted method for dealing with facial images",
+            "Current technology no longer rely on 68 or even 110 facial landmark points for facial recognition"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "In opinion summarization, which of the below is still difficult to handle?",
+        "options": [
+            "Dimensionality",
+            "Huge dataset",
+            "Transforming text to numerical rating",
+            "Trustworthy comment",
+            "None of the above"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "What is cosine distance?",
+        "options": [
+            "It measures the distance between 2 error surfaces",
+            "It calculates the Euclidean distance between two given error vectors",
+            "The distance indicates the angle between two high dimensional vectors",
+            "The distance between the correct vectors to the incorrect vectors",
+            "None of the above"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "In cancer screening test classifier gives +ve for cancer that screen test tens of thousand of patients every year. Which of the below type classification metric is the most suitable?",
+        "options": [
+            "Accuracy",
+            "Precision",
+            "Recall",
+            "F1"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "In text and document machine learning problems, why is the feature vector always sparse?",
+        "options": [
+            "Number of documents is huge and contains hundreds of thousands of words",
+            "Size of documents can be huge",
+            "Number of words in each document is large",
+            "Number of words used in each document compared to BOW is very small"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "What is F1 score?",
+        "options": [
+            "It is a kind of classification error measure specially designed for document or NLP applications",
+            "It is an error measurement showing the frequency of error occurring and thus the significance of the error",
+            "It is a harmonic mean of precision and recall evaluation",
+            "It is designed to reduce bias error measurement",
+            "None of the above"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Why do we often need to do dimensionality reduction on document processing?",
+        "options": [
+            "The dimensionality is large that may affects the classification accuracy",
+            "Dimensionality reduction enables us to reduce the overall computational complexity so that the task can be performed on real-time",
+            "The input feature vector is of high dimensions and sparse",
+            "All of the list answers"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Which of the below statement is not accurate?",
+        "options": [
+            "Principle component Analysis is often used in pre-processing",
+            "Stemming is a process making i.e., receiving = receive",
+            "Word embedding allows similar words to be represented closely",
+            "Term frequency Inverse Document (TFID) can reduce the bias caused by certain highly popular words",
+            "All the above are accurate"
+        ],
+        "answer": 4
+    },
+    {
+        "question": "Why don't we use conventional linear algebra to solve linear regression problems?",
+        "options": [
+            "Computer based numerical method is available to solve linear regression",
+            "The number of data points is often too large",
+            "There may not be an exact solution all the time",
+            "All of the list answers"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Why do we use Logistic regression instead of linear regression?",
+        "options": [
+            "Logistic regression gives us an output in probability",
+            "Logistic regression can handle multi-dimensional data",
+            "Linear regression is unable to give an output between 0 and 1",
+            "There is an efficient gradient descent algorithm for logistic regression"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Imbalanced data",
+        "options": [
+            "They are kinds of data that consists of imbalanced structure like numerical and non-numerical",
+            "They are problems that cannot be easily solved",
+            "It always happens on many social happening problems",
+            "Cannot be easily handled by available toolkit software"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Logistic regression uses log odds because",
+        "options": [
+            "Statistic people got used to using log odds",
+            "Log odds of the probability function will end up a straight line like linear regression which is good for modeling",
+            "Log odds can reduce the computational complexity",
+            "All the list answers"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "For a given dataset with over 1 thousand points, we must reduce the training error to as low as possible",
+        "options": [
+            "Yes",
+            "No, not all the cases as it may be too much effort",
+            "Yes, otherwise the classification error will be too large to accept",
+            "Not necessary as the performance may even be worse than not too low a training error for some cases"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "It is about overfitting",
+        "options": [
+            "It is inevitable for most datasets, although we do not like overfitting",
+            "It can be solved by using a smaller learning rate",
+            "It is not desirable as it will degrade the inferencing performance in a noticeable way",
+            "All the list answers"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "About learning rate of gradient descent algorithm",
+        "options": [
+            "We always like to use a not too small learning rate in order to speed up the training process",
+            "Using too large of a learning rate may cause oscillation and may never be able to find a solution",
+            "There is no golden rule for setting learning rate",
+            "The overall learning or training process can be speeded up if we can use a kind of adaptive learning rate that varies the rate along the training process",
+            "All the list answers"
+        ],
+        "answer": 4
+    },
+    {
+        "question": "About gradient descent algorithm",
+        "options": [
+            "We use it because it is relatively computationally efficient",
+            "Once we find a reasonably good starting initialization we will have a better chance to obtain a close-optimal solution",
+            "Finding the solution may sometimes be problematic especially when we are dealing with a complicated rugged high dimensional error surface",
+            "All the list answers"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Eigen Face",
+        "options": [
+            "It can be used for all kinds of human image compression",
+            "It finds a number of approximate images invar",
+            "It enables us to do a good compression by compressing the huge number of pixels of an image",
+            "It enables us to keep the most significant images under the eigen domain"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Why do we need to do dimensionality reduction",
+        "options": [
+            "High dimensional data makes data visualization impossible",
+            "High dimensional data requires much more computational effort to handle",
+            "High dimensional data requires significantly more data points to be analyzed",
+            "All the list answers"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "PCA and finding the eigenvectors",
+        "options": [
+            "Finding eigenvectors means finding the significant/largest vectors",
+            "Finding eigenvectors helps finding the reduced dimensional space",
+            "Finding the eigenvectors physically means finding the projections that give the largest variance",
+            "All the list answers"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "About PCA",
+        "options": [
+            "It is a nonlinear dimensionality reduction method",
+            "It is a linear dimensionality reduction method so it may not be able to handle certain kinds of problems",
+            "It eliminates useless attributes to reduce the dimensionality",
+            "The dimensionality reduction process through matrix operation can preserve the original data characteristics of all given datasets"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "How do we determine the number of reduced dimensional space in PCA",
+        "options": [
+            "Very difficult",
+            "We use trial and error method",
+            "Can be briefly determined by the sum of % of eigenvectors",
+            "All the list answers"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "PCA and feature subset selection",
+        "options": [
+            "They both give the same kind of reduced dimensional dataset",
+            "They give the same kind of output but using different mathematical mechanism",
+            "PCA is also a kind of feature subset selection method",
+            "PCA does not maintain the numerical values of attributes through a matrix operation, while feature subset selects only the useful attributes",
+            "None of the list answers"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "For a given datasets with many variables",
+        "options": [
+            "We may find the dataset difficult to visualize",
+            "Using conventional 3-D plotting to visualize the dataset may require many 3-D plottings",
+            "It will be better if we can have a mathematical operation to reduce the many features into just 2 variables or 3 variables so that we can plot the data out for visualization",
+            "Without visualizing the data in a 2-D or 3-D, we find it very difficult to see the relationships between different variables",
+            "All the list answers"
+        ],
+        "answer": 4
+    },
+    {
+        "question": "What is the advantage of hierarchical clustering method over K-means?",
+        "options": [
+            "It is computationally efficient than K means",
+            "It requires less RAM during computation",
+            "It can handle numerical and non-numerical data together",
+            "It is not sensitive to initializations and will the same exact result even if you re-run your analysis with different initialization conditions"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Clustering method cannot be used for classification",
+        "options": [
+            "Not correct, clustering can also be used for classification",
+            "Correct, it is to group similar items into a clustered.",
+            "Correct, it is never a classifier just a clustering method",
+            "Not correct, clustering is also a kind of classification"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "What is the significant feature of Self Organizing map?",
+        "options": [
+            "It reduces the high dimensional data into a 2-D space for clear visualization",
+            "It is a dimensionality reduction method",
+            "There is no parameter setting during computation",
+            "All the list answers"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Why is hierarchical clustering computationally expensive?",
+        "options": [
+            "It needs merging or splitting operations for deciding what to split or merge",
+            "It does not rely on gradient descent method that makes computation more complex",
+            "When the dimensionality is getting large, computation can become explosively large",
+            "Just when the number of data is large"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Why do we use unsupervised learning method instead of using supervised method?",
+        "options": [
+            "Unsupervised learning can speed up the learning time",
+            "Unsupervised learning method usually can provide better classification performance",
+            "Unsupervised method is more robust and usually less computationally complex than supervised method",
+            "Unsupervised method is used when there is no label"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "What is the major disadvantage of K-means clustering method?",
+        "options": [
+            "Result is highly dependent upon initial setting",
+            "It does not give us the number of cluster and rely on users to guess",
+            "It is highly computationally complex for high dimensional dataset",
+            "It does not give us how different clusters are related in the original data input space"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "What is the major disadvantage(s) of hierarchical clustering method?",
+        "options": [
+            "It is too sensitive to outliers",
+            "Cannot give us the number of clusters",
+            "It does not provide reliable solution and it is computationally expansive when dealing with large dataset",
+            "Hierarchical clustering method is highly dependent upon initializations"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Classifier: Generative vs discriminative",
+        "options": [
+            "Both are very similar but use slightly different probability distribution",
+            "Generative model is based on the given dataset to generate a set of training data, whereas discriminative will find some of the given data (but not all) for training",
+            "Generative use probability to work on it while discriminative uses learning algorithm to train",
+            "Generative uses data class distribution to classify while discriminative uses given data (with label) to classify new unseen data class"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Why do we use fold test for supervised training",
+        "options": [
+            "Fold test reduce computational time as it uses part of the data but not all",
+            "Fold test can increase the training accuracy of each fold test",
+            "Fold test can avoid training set data imbalanced selection",
+            "All the list answers"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Why KNN is not the best classifier for complicated problems",
+        "options": [
+            "The training algorithm does not use advanced gradient descent method and thus sometimes get stuck in local minima",
+            "The classification results varies with significantly with different K",
+            "It requires a lot of parameters setting",
+            "It requires a lot of memory and can be computationally demanding for high dimensional problems"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Selection of K for KNN classifier",
+        "options": [
+            "To increase the accuracy, we like to use lower K so that we can model virtually all given data pointsprovided",
+            "In general problems, we often use 6NN, 8NN, or 10NN",
+            "In general problems, we often use 7NN, 9NN. 11NN or 13NN etc",
+            "None of the given answers"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Why it is called Support Vector Machine (SVM)",
+        "options": [
+            "SVM classifiers relies on finding the support vectors to maximize the classification accuracy",
+            "SVM classifiers finds the support vector that will then be used to speed up the training process",
+            "SVM classifiers finds the support vector to increase the separation between two classes of data",
+            "All the list answers"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "In a 3 dimensional dataset to classify 2 groups of voting members with labels",
+        "options": [
+            "Its classification boundary lies in a linear or nonlinear line separating the 2 classes",
+            "Its classification boundary lies in a 2 dimensional plane",
+            "We can hardly see the data visualization during classification process although we can visualize a 3-D space data",
+            "we need to use several different types of classifiers and find the final result that is their average/voting results"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Why do we use Kernel trick",
+        "options": [
+            "It helps increasing the separation distance between the two classes under different dimensional space",
+            "It helps increasing the classification accuracy via filtering out the outliers",
+            "It helps constructing a classification contour under different dimensional space",
+            "It helps separating two inseparable class data through mapping into a higher dimensional space where separation becomes possible"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Fisher LDA",
+        "options": [
+            "It is a linear classifier so it cannot handle many complicated problems",
+            "It is a linear classifier relying on finding its eigen vector to make non-separable data become separable",
+            "Its idea is to project the data into a new orientation to obtain maximum inter class separation distance and minimum intra class variance",
+            "all the list answers"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "In probability theory, two events are independent",
+        "options": [
+            "if the occurrence of one event gives us no information about the occurrence of another event",
+            "if one event and another event may both occur",
+            "if the occurrences of both events have the same chance same",
+            "None of the above list answers"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Probability theory",
+        "options": [
+            "The first result of tossing a fair coin is independent of the second tossing result",
+            "Professor's research results are independent of student GPA results",
+            "Student final exam grade is not independent of midterm test result",
+            "All the list answers"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Decision tree",
+        "options": [
+            "using probability theory and compare the possible probabilities for splitting the tree",
+            "Use EM learning algorithm to develop the tree and nodes",
+            "It uses entropy as an index for EM optimization",
+            "It measures entropy and compare information gain during tree and nodes splitting."
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Posterior probability",
+        "options": [
+            "It is the probability of an event that happened before",
+            "It needs information on all prior",
+            "a revised/updated probability of an event occurring after taking the into consideration of new information",
+            "dependent upon Bayes rule"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Naive Bayes classifier",
+        "options": [
+            "It is derived from Bayes rule",
+            "It is derived from probability chain rule",
+            "It is derived based on the assumption that all features are conditionally independent",
+            "All the list answers"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Naive Bayes Classifier",
+        "options": [
+            "A supervised classifier and requires a gradient descent type training algorithm to train",
+            "A unsupervised classifier that requires no label but works well for many applications",
+            "It is a probabilistic method comparing the probability of all independent cases",
+            "It uses Bayes theorem and compare the maximum a posterior of different cases"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Decision tree",
+        "options": [
+            "measure posterior probability",
+            "measure joint probability",
+            "measure entropy and information gain",
+            "All the list answers"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Why do we need multi-layer instead of single-layer perceptron?",
+        "options": [
+            "To speed up the training process",
+            "To solve the nonlinear-separable problem like XOR",
+            "To reduce the complexity of the model",
+            "To make the model robust to noise",
+            "None of the list answers"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Linear Regression",
+        "options": [
+            "It can be implemented by a neural network model",
+            "It can be implemented by the least squares regression method",
+            "It can be used to find the best-fitting linear relationship between a dependent variable and one or more independent variables.",
+            "It can be affected by outliers in the dataset",
+            "All the list answers"
+        ],
+        "answer": 4
+    },
+    {
+        "question": "Recurrent neural network is used for sequence to sequence applications such as sentence prediction",
+        "options": [
+            "RNN was designed mainly to deal with sequence to sequence applications",
+            "This is due to its dynamical behavior generated by the recurrent connection",
+            "It is an extended model from feedforward neural network to handle sequence to sequence applications",
+            "All the list answers",
+            "None of the list answers"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Feedforward Neural network",
+        "options": [
+            "It is now in a form of multi hidden layers",
+            "It relies on back-propagation mechanism to adjust different layers neurons weightings during training",
+            "In training, each iteration goes through all the given data instances and sum the total error for each instance",
+            "All the list answers"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Which of the following statement about backpropagation is correct?",
+        "options": [
+            "Chain rule is the key to backpropagation",
+            "The models with more layers are prone to gradient vanishing problem during backpropagation",
+            "The backpropagation algorithm was introduced by Hinton in 1986 and its concept was introduced by Rosenblatt",
+            "The weights of the neural network models are adjusted through backpropagation",
+            "All the list answers"
+        ],
+        "answer": 4
+    },
+    {
+        "question": "In the context of imbalanced classification problems, which of the following statements is true?",
+        "options": [
+            "In imbalanced datasets, accuracy is a reliable performance metric to evaluate the model.",
+            "Imbalanced classification problems can be mitigated by oversampling, under-sampling, or reweighting",
+            "Imbalanced datasets refer to datasets where the distribution of classes is roughly equal.",
+            "Imbalanced datasets are rare and typically do not require any special handling.",
+            "None of the list answers"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "In the neural network model training, which of the following strategy cannot help to improve the optimization?",
+        "options": [
+            "Using stochastic gradient descent to escape the local minima",
+            "Simulated annealing is useful for model training",
+            "Using larger learning rate to reach the global minimum",
+            "All the list answers",
+            "None of the list answers"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which of the following statement about deep neural networks is incorrect?",
+        "options": [
+            "They consist of many layers of different functions",
+            "The deep neural networks with more layers usually have stronger performance",
+            "Shallow (with 1 or 2 hidden layers) neural networks are less demanding on computational resources, while deep neural networks require a lot more.",
+            "In practical engineering, we always prefer to using deep neural networks instead of shallow neural networks",
+            "None of the list answers"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Which of the following statement about the development history of neural networks is incorrect?",
+        "options": [
+            "Rumelhart and Hinton proposed backpropagation algorithm for training feedforward neural networks",
+            "Yann LeCun developed the first convolutional network called LeNet-5",
+            "The deep network and a new training method proposed by Hinton in 2006 is significant to NN technology",
+            "Yann LeCun and Hinton won 2018 Turing Award for the breakthroughs they have made on Deep Neural Networks",
+            "None of the list answers"
+        ],
+        "answer": 4
+    },
+    {
+        "question": "Convolutional neural network (CNN)",
+        "options": [
+            "Low-level, mid-level, and high-level image features are extracted by CNN at different stages/layer",
+            "ts convolution operation is efficient compared to a fully connected feedforward NN layers with many neurons",
+            "An CNN can be implemented by PyTorch or TensorFlow conveniently",
+            "It delivers good results in computer vision applications such as facial recognition",
+            "All the list answers"
+        ],
+        "answer": 4
+    },
+    {
+        "question": "which of the following statement about convolutional neural network (CNN) is correct?",
+        "options": [
+            "Convolutional layers are good at capturing global features across the entire image compared to fully connected layers",
+            "CNNs completely ignore the spatial relationship between pixels, treating each pixel independently",
+            "CNNs always require a fixed input size, making them inflexible for variable-sized images",
+            "The number of channels in convolutional layers is designed by users",
+            "None of the list answers"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "which of the following statement about convolutional neural network (CNN) is incorrect?",
+        "options": [
+            "Convolutional, ReLU, and Subsampling (CRS) layers are the typical elements",
+            "The filter values are trained by Backpropagation algorithm",
+            "Pooling layer is used to perform subsampling and have an effect on reducing computation",
+            "Large filter size such as 9x9 and 11x11 are usually preferred",
+            "All the list answers"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "What is the main purpose of transfer learning in machine learning?",
+        "options": [
+            "To train a model from scratch on a new dataset",
+            "To speed up the training process and to improve the performance of a model on a new task",
+            "To enable a model to learn continuously without forgetting previous knowledge",
+            "To improve the interpretability of the model",
+            "All the list answers"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which of the following statement is correct?",
+        "options": [
+            "2012 AlexNet created the direction of implementing deep neural networks in GPU platform",
+            "It is computationally straightforward to train a convolutional neural network model in 1990s",
+            "Up to 2015, there was no evidence showing more network layers may lead to improved performance",
+            "GPUs were originally designed for the neural networks training",
+            "GPUs are optimized for sequential processing, making them ideal for tasks with low parallelization requirements."
+        ],
+        "answer": 0
+    }
+]

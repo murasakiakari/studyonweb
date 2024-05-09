@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EE4146 MC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-container {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center align-items-center vh-100" id="formDiv" style="display: none;">
+        <form onsubmit="event.preventDefault(); submit();" class="col-12 col-md-6">
+            <h3 id="question"></h3>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" value="0" id="option1">
+                <label class="form-check-label" for="option1" id="option1Label"></label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" value="1" id="option2">
+                <label class="form-check-label" for="option2" id="option2Label"></label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" value="2" id="option3">
+                <label class="form-check-label" for="option3" id="option3Label"></label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" value="3" id="option4">
+                <label class="form-check-label" for="option4" id="option4Label"></label>
+            </div>
+            <div class="form-check" id="option5Div" style="display: none;">
+                <input class="form-check-input" type="radio" name="answer" value="4" id="option5">
+                <label class="form-check-label" for="option5" id="option5Label"></label>
+            </div>
+            <br>
+            <input type="submit" value="Submit" class="btn btn-primary">
+        </form>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+    let questions = [];
+    let currentQuestion = -1;
+
+    class Question {
+        constructor(question, options, answer) {
+            this.question = question;
+            this.options = options;
+            this.answer = answer;
+        }
+
+        shuffleOptions() {
+            let answerString = this.options[this.answer];
+            shuffle(this.options);
+            for (let i = 0; i < this.options.length; i++) {
+                if (this.options[i] === answerString) {
+                    this.answer = i;
+                    break;
+                }
+            }
+        }
+    }
+
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    function parseJsonToQuestion(json) {
+        return json.map(q => {
+            if (typeof q.question !== "string") {
+                alert("Invalid question format: " + q.question);
+                return;
+            }
+
+            if (!Array.isArray(q.options) || q.options.length < 4) {
+                alert("Invalid options format: " + q.options);
+                return;
+            }
+
+            if (typeof q.answer !== "number" || q.answer < 0 || q.answer >= q.options.length) {
+                alert("Invalid answer format: " + q.answer);
+                return;
+            }
+
+            return new Question(q.question, q.options, q.answer);
+        });
+    }
+
+    function init() {
+        let params = new URLSearchParams(window.location.search);
+        let source = params.get('source');
+        if (source) {
+            $.ajax({
+                url: source,
+                dataType: 'json',
+                success: function (data) {
+                    questions = parseJsonToQuestion(data);
+                    if (questions.length == 0) {
+                        alert("No valid questions found");
+                        return;
+                    }
+
+                    $("#formDiv").show();
+                    newRound();
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert("Failed to load questions from source: " + errorThrown);
+                }
+            });
+        }
+
+        alert("No source provided");
+    }
+
+    function newRound() {
+        shuffle(questions);
+        questions.forEach(question => {
+            question.shuffleOptions();
+        });
+
+        currentQuestion = -1;
+        nextQuestion();
+    }
+
+    function nextQuestion() {
+        currentQuestion++;
+        if (currentQuestion >= questions.length) {
+            alert("All questions answered, restarting");
+            newRound();
+        }
+
+        displayQuestion(questions[currentQuestion]);
+    }
+
+    function displayQuestion(question) {
+        $("#question").text(question.question);
+        $("#option1Label").text(question.options[0]);
+        $("#option2Label").text(question.options[1]);
+        $("#option3Label").text(question.options[2]);
+        $("#option4Label").text(question.options[3]);
+
+        if (question.options.length > 4) {
+            $("#option5Div").show();
+            $("#option5Label").text(question.options[4]);
+        } else {
+            $("#option5Div").hide();
+        }
+    }
+
+    function submit() {
+        let answer = $("input[name='answer']:checked").val();
+        if (answer == currentQuestion.answer) {
+            alert("Correct");
+        } else {
+            alert("Incorrect, the current answer is \n" + currentQuestion.options[currentQuestion.answer]);
+        }
+
+        $("input[name='answer']").prop('checked', false);
+        nextQuestion();
+    }
+
+    $(() => {
+        init();
+    })
+</script>
+
+</html>
