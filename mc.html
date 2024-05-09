@@ -98,7 +98,6 @@
 
     function init() {
         if (questions.length > 0) {
-            $("#questionForm").show();
             newRound();
             return;
         }
@@ -116,7 +115,7 @@
                         return;
                     }
 
-                    $("#questionForm").show();
+                    questionsToBeAnswered = questions;
                     newRound();
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
@@ -164,6 +163,8 @@
     }
 
     function displayQuestion(question) {
+        $("#questionForm").show();
+
         $("#question").text(question.question);
         $("#option1Label").text(question.options[0]);
         $("#option2Label").text(question.options[1]);
